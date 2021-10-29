@@ -25,9 +25,9 @@ public class FuncionarioController {
 		return ResponseEntity.ok(list);
 	}
 
-	@GetMapping(value = "/{Id}")
-	public ResponseEntity<Funcionario> findById(@PathVariable Long Id) {
-		Funcionario func = funcionarioRepository.findById(Id).get();
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Funcionario> findById(@PathVariable Long id) {
+		Funcionario func = funcionarioRepository.findById(id).get();
 		return ResponseEntity.ok(func);
 	}
 
