@@ -35,7 +35,14 @@ public class FuncionarioController {
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Funcionario> findById(@PathVariable Long id) {
 		
-		log.info("Porta: "+env.getProperty("local.server.port"));
+		/*try {
+			Thread.sleep(10000L);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		log.info("Porta: "+env.getProperty("local.server.port"));*/
 		
 		Funcionario func = funcionarioRepository.findById(id).get();
 		return ResponseEntity.ok(func);
